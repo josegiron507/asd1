@@ -936,7 +936,7 @@ transition: 0.4s;
 /*keyframes*/
 
 @keyframes orbitMercurio {
-  from { transform: rotate(0deg) translateX(100px) rotate(0deg); }
+  from { transform: rotate(0deg)  translateX(100px) rotate(0deg) ; }
   to   { transform: rotate(-360deg) translateX(100px) rotate(360deg); }
 }
 
