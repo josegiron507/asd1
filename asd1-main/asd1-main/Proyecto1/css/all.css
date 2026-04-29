@@ -1,0 +1,1171 @@
+
+/*MENU*/
+
+ul {
+    display: flex;
+    background-color: #1A1A2E;
+    border-radius: 9px;
+    box-shadow: 2px 3px   #2f2d4e;
+    justify-content: flex;
+    list-style: none;
+    text-shadow: 4px 4px black;
+    padding: 0;
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+ul li {
+    margin-left: 350px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.Menu {
+    font-size: 40px;
+    opacity: 60%;
+    backdrop-filter: blur(10px);
+    color: #3F37C9;
+    text-decoration: none;
+    font-weight: bold;
+    transition:all 0.3s;
+    
+} 
+
+
+
+.Menu:hover{
+    font-size: 45px;
+    color: #5e58cf;
+    
+}
+
+
+
+/*Class*/
+
+.titulo1 {
+    font-size: 50px;
+    color: rgb(255, 255, 255);
+    text-shadow: 3px -5px rgb(35, 36, 0);
+    font-family: "Sekuya", system-ui;
+}
+
+.titulotema {
+    color: azure;
+    background-color:  #2f2d4e;
+    text-shadow: 4px 4px #1A1A2E;
+    border-radius: 36px;
+    font-size: 50px;
+    font-family: "Exo", sans-serif;
+    font-weight: bold;
+}
+
+.titulotema2 {
+    color: azure;
+    font-family: "Exo", sans-serif;
+    font-size: 80px;
+    font-weight: bold;
+}
+
+.titulotema3 {
+    color: azure;
+    font-family: "Exo", sans-serif;
+    background-color:  #2f2d4e;
+    border-radius: 18px;
+    font-size: 50px;
+    font-weight: bold;
+    text-shadow: 2px 2px darkgray;
+}
+
+.resaltar{
+    color: white;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.imgnoti{
+    box-sizing: 5px;
+    box-shadow: 3px 3px;
+    border-radius: 20px;
+    width: 800px;
+}
+
+/*id*/
+
+#Texto {
+    color: darkgray;
+    font-size: 30px;
+}
+
+#esp {
+    width: 150%;
+    }
+
+#Imgsisorg {
+    width: 1000px;
+    box-sizing: 5px;
+    box-shadow: 3px 3px;
+    border-radius: 20px;
+}
+
+
+/*planetas*/
+
+.sun {
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.sun img{
+  width: 150px; 
+  transition: 0.4s;
+}
+
+.sun span{
+  position: absolute;
+  bottom: -18px;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.4s;
+  color: beige;
+  font-size: 42px;
+  text-shadow: 2px 3px #303041;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.sun:hover span{
+    opacity: 1;
+}
+
+.sun:hover img{
+    width: 185px;
+}
+
+.mercurio{
+  position: absolute;
+  top: 89%;
+  left: 49.5%;
+  transform: translate(-50%, -50%);
+  animation: orbitMercurio 6s linear infinite;
+}
+
+.mercurio img{
+width: 20px;
+transition: 0.4s;
+}
+
+.mercurio:hover img{
+    width: 50px;
+}
+
+.mercurio span{
+  position: absolute;
+  bottom: -18px;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.4s;
+  color: beige;
+  font-size: 42px;
+  text-shadow: 2px 3px #303041;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.mercurio:hover span{
+    opacity: 1;
+}
+
+.venus {
+  position: absolute;
+ top: 89%;
+  left: 49.5%;
+  
+ transform: translate(-50%, -50%);
+  animation: orbitVenus 11s linear infinite -5s;
+  
+}
+
+.venus img{
+    width: 40px;
+    transition: 0.4s;
+}
+
+.venus:hover img{
+    width: 68px;
+}
+
+.venus span{
+  position: absolute;
+  bottom: -18px;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.4s;
+  color: beige;
+  font-size: 42px;
+  text-shadow: 2px 3px #303041;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.venus:hover span{
+    opacity: 1;
+}
+
+.tierra{
+position: absolute;
+top: 89%;
+left: 49.5%;
+transform: translate(-50%, -50%);
+animation: orbitEarth 18s linear infinite -10s;
+}
+
+.tierra img{
+  width: 70px;
+  transition: 0.4s;
+  
+}
+
+.tierra:hover img{
+    width: 100px;
+}
+
+.tierra span {
+  position: absolute;
+  bottom: -18px;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.4s;
+  color: beige;
+  font-size: 42px;
+  text-shadow: 2px 3px #303041;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.tierra:hover span {
+  opacity: 1;
+}
+
+.marte{
+  position: absolute;
+  top: 91%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: orbitMarte 28s linear infinite -15s;
+  
+}
+
+.marte img{
+width: 40px;
+transition: 0.4s;
+}
+
+.marte:hover img {
+    width: 70px;
+}
+
+.marte span {
+  position: absolute;
+  bottom: -18px;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.4s;
+  color: beige;
+  font-size: 42px;
+  text-shadow: 2px 3px #303041;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.marte:hover span{
+    opacity: 1;
+}
+
+.jupiter{
+  position: absolute;
+  top: 89%;
+  left: 49.5%;
+  animation: orbitJupiter 40s linear infinite ;
+}
+
+.jupiter img{
+width: 80px;
+transition: 0.4s;
+}
+
+.jupiter:hover img{
+    width: 120px;
+}
+
+.jupiter span {
+  position: absolute;
+  bottom: -18px;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.4s;
+  color: beige;
+  font-size: 42px;
+  text-shadow: 2px 3px #303041;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.jupiter:hover span{
+    opacity: 1;
+}
+
+.saturno{
+  position: absolute;
+  top: 88%;
+  left: 49%;
+  animation: orbitSaturno 60s linear infinite -35s;
+}
+
+.saturno img{
+width: 120px;
+transition: 0.4s;
+}
+
+.saturno:hover img{
+    width: 165px;
+}
+
+.saturno span {
+  position: absolute;
+  bottom: -18px;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.4s;
+  color: beige;
+  font-size: 42px;
+  text-shadow: 2px 3px #303041;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.saturno:hover span{
+    opacity: 1;
+}
+
+.urano{
+  position: absolute;
+  top: 89%;
+  left: 51%;
+  animation: orbitUrano 80s linear infinite -70s;
+}
+
+.urano img{
+width: 50px;
+ transition: 0.4s;
+}
+
+.urano:hover img{
+    width: 80px;
+}
+
+.urano span {
+  position: absolute;
+  bottom: -18px;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.4s;
+  color: beige;
+  font-size: 42px;
+  text-shadow: 2px 3px #303041;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.urano:hover span{
+    opacity: 1;
+}
+
+.neptuno{
+  position: absolute;
+  top: 89%;
+  left: 51%;
+  animation: orbitNeptuno 100s linear infinite -32s;
+}
+
+.neptuno img{
+width: 50px;
+transition: 0.4s;
+}
+
+.neptuno:hover img{
+    width: 90px;
+}
+
+.neptuno span {
+  position: absolute;
+  bottom: -18px;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.4s;
+  color: beige;
+  font-size: 42px;
+  text-shadow: 2px 3px #303041;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.neptuno:hover span{
+    opacity: 1;
+}
+
+/*asteroides*/
+
+.asteroide1 {
+    position: absolute;
+    top: 89%;
+    left: 51%;
+    width: 50px;
+    animation: orbitRocas 32s linear infinite -31s;
+}
+
+.asteroide2 {
+    position: absolute;
+    top: 89%;
+    left: 51%;
+    width: 40px;
+    animation: orbitRocas2 32s linear infinite -0.5s;
+}
+
+.asteroide3 {
+    position: absolute;
+    top: 89%;
+    left: 51%;
+    width: 45px;
+    animation: orbitRocas3 32s linear infinite -1s;
+}
+
+.asteroide4 {
+    position: absolute;
+    top: 89%;
+    left: 51%;
+    width: 50px;
+    animation: orbitRocas 32s linear infinite -1.5s;
+}
+
+.asteroide5 {
+    position: absolute;
+    top: 89%;
+    left: 51%;
+    width: 40px;
+    animation: orbitRocas2 32s linear infinite -2s;
+}
+
+.asteroide6 {
+    position: absolute;
+    top: 89%;
+    left: 51%;
+    width: 45px;
+    animation: orbitRocas3 32s linear infinite -2.5s;
+}
+
+.asteroide7 {
+    position: absolute;
+    top: 89%;
+    left: 51%;
+    width: 50px;
+    animation: orbitRocas 32s linear infinite -3s;
+}
+
+.asteroide8 {
+    position: absolute;
+    top: 89%;
+    left: 51%;
+    width: 40px;
+    animation: orbitRocas2 32s linear infinite -3.5s;
+}
+
+.asteroide9 {
+    position: absolute;
+    top: 89%;
+    left: 51%;
+    width: 45px;
+    animation: orbitRocas3 32s linear infinite -4s;
+}
+
+.asteroide10 {
+    position: absolute;
+    top: 89%;
+    left: 51%;
+    width: 50px;
+    animation: orbitRocas 32s linear infinite -4.5s;
+}
+
+.asteroide11 {
+    position: absolute;
+    top: 89%;
+    left: 51%;
+    width: 40px;
+    animation: orbitRocas2 32s linear infinite -5s;
+}
+
+.asteroide12 {
+    position: absolute;
+    top: 89%;
+    left: 51%;
+    width: 45px;
+    animation: orbitRocas3 32s linear infinite -5.5s;
+}
+
+.asteroide13 {
+    position: absolute;
+    top: 89%;
+    left: 51%;
+    width: 45px;
+    animation: orbitRocas 32s linear infinite -6s;
+}
+
+.asteroide14 {
+    position: absolute;
+    top: 89%;
+    left: 51%;
+    width: 50px;
+    animation: orbitRocas2 32s linear infinite -6.5s;
+}
+
+.asteroide15 {
+    position: absolute;
+    top: 89%;
+    left: 51%;
+    width: 40px;
+    animation: orbitRocas3 32s linear infinite -7s;
+}
+
+.asteroide16 {
+    position: absolute;
+    top: 89%;
+    left: 51%;
+    width: 45px;
+    animation: orbitRocas 32s linear infinite -7.5s;
+}
+
+.asteroide17 {
+    position: absolute;
+    top: 89%;
+    left: 51%;
+    width: 50px;
+    animation: orbitRocas2 32s linear infinite -8s;
+}
+
+.asteroide18 {
+    position: absolute;
+    top: 89%;
+    left: 51%;
+    width: 40px;
+    animation: orbitRocas3 32s linear infinite -8.5s;
+}
+
+.asteroide19 {
+    position: absolute;
+    top: 89%;
+    left: 51%;
+    width: 45px;
+    animation: orbitRocas 32s linear infinite -9s;
+}
+
+.asteroide20 {
+    position: absolute;
+    top: 89%;
+    left: 51%;
+    width: 45px;
+    animation: orbitRocas2 32s linear infinite -9.5s;
+}
+
+.asteroide21 {
+    position: absolute;
+    top: 89%;
+    left: 51%;
+    width: 45px;
+    animation: orbitRocas3 32s linear infinite -10s;
+}
+
+.asteroide22 {
+    position: absolute;
+    top: 89%;
+    left: 51%;
+    width: 50px;
+    animation: orbitRocas 32s linear infinite -10.5s;
+}
+
+.asteroide23 {
+    position: absolute;
+    top: 89%;
+    left: 51%;
+    width: 40px;
+    animation: orbitRocas2 32s linear infinite -11s;
+}
+
+.asteroide24 {
+    position: absolute;
+    top: 89%;
+    left: 51%;
+    width: 45px;
+    animation: orbitRocas3 32s linear infinite -11.5s;
+}
+
+.asteroide25 {
+    position: absolute;
+    top: 89%;
+    left: 51%;
+    width: 50px;
+    animation: orbitRocas 32s linear infinite -12s;
+}
+
+.asteroide26 {
+    position: absolute;
+    top: 89%;
+    left: 51%;
+    width: 40px;
+    animation: orbitRocas2 32s linear infinite -12.5s;
+}
+
+.asteroide27 {
+    position: absolute;
+    top: 89%;
+    left: 51%;
+    width: 45px;
+    animation: orbitRocas3 32s linear infinite -13s;
+}
+
+.asteroide28 {
+    position: absolute;
+    top: 89%;
+    left: 51%;
+    width: 50px;
+    animation: orbitRocas 32s linear infinite -13.5s;
+}
+
+.asteroide29 {
+    position: absolute;
+    top: 89%;
+    left: 51%;
+    width: 40px;
+    animation: orbitRocas2 32s linear infinite -14s;
+}
+
+.asteroide30 {
+    position: absolute;
+    top: 89%;
+    left: 51%;
+    width: 45px;
+    animation: orbitRocas3 32s linear infinite -14.5s;
+}
+
+.asteroide31 {
+    position: absolute;
+    top: 89%;
+    left: 51%;
+    width: 50px;
+    animation: orbitRocas 32s linear infinite -15s;
+}
+
+.asteroide32 {
+    position: absolute;
+    top: 89%;
+    left: 51%;
+    width: 40px;
+    animation: orbitRocas2 32s linear infinite -15.5s;
+}
+
+.asteroide33 {
+    position: absolute;
+    top: 89%;
+    left: 51%;
+    width: 45px;
+    animation: orbitRocas 32s linear infinite -16s;
+}
+
+.asteroide34 {
+    position: absolute;
+    top: 89%;
+    left: 51%;
+    width: 45px;
+    animation: orbitRocas2 32s linear infinite -16.5s;
+}
+
+.asteroide35 {
+    position: absolute;
+    top: 89%;
+    left: 51%;
+    width: 50px;
+    animation: orbitRocas3 32s linear infinite -17s;
+}
+
+.asteroide36 {
+    position: absolute;
+    top: 89%;
+    left: 51%;
+    width: 40px;
+    animation: orbitRocas 32s linear infinite -17.5s;
+}
+
+.asteroide37 {
+    position: absolute;
+    top: 89%;
+    left: 51%;
+    width: 45px;
+    animation: orbitRocas 32s linear infinite -18s;
+}
+
+.asteroide38 {
+    position: absolute;
+    top: 89%;
+    left: 51%;
+    width: 50px;
+    animation: orbitRocas3 32s linear infinite -18.5s;
+}
+
+.asteroide39 {
+    position: absolute;
+    top: 89%;
+    left: 51%;
+    width: 40px;
+    animation: orbitRocas 32s linear infinite -19s;
+}
+
+.asteroide40 {
+    position: absolute;
+    top: 89%;
+    left: 51%;
+    width: 45px;
+    animation: orbitRocas2 32s linear infinite -19.5s;
+}
+
+.asteroide41 {
+    position: absolute;
+    top: 89%;
+    left: 51%;
+    width: 45px;
+    animation: orbitRocas3 32s linear infinite -20s;
+}
+
+.asteroide42 {
+    position: absolute;
+    top: 89%;
+    left: 51%;
+    width: 45px;
+    animation: orbitRocas 32s linear infinite -20.5s;
+}
+
+.asteroide43 {
+    position: absolute;
+    top: 89%;
+    left: 51%;
+    width: 40px;
+    animation: orbitRocas2 32s linear infinite -21s;
+}
+
+.asteroide44 {
+    position: absolute;
+    top: 89%;
+    left: 51%;
+    width: 45px;
+    animation: orbitRocas3 32s linear infinite -21.5s;
+}
+
+.asteroide45 {
+    position: absolute;
+    top: 89%;
+    left: 51%;
+    width: 50px;
+    animation: orbitRocas 32s linear infinite -22s;
+}
+
+.asteroide46 {
+    position: absolute;
+    top: 89%;
+    left: 51%;
+    width: 40px;
+    animation: orbitRocas 32s linear infinite -22.5s;
+}
+
+.asteroide47 {
+    position: absolute;
+    top: 89%;
+    left: 51%;
+    width: 45px;
+    animation: orbitRocas3 32s linear infinite -23s;
+}
+
+.asteroide48 {
+    position: absolute;
+    top: 89%;
+    left: 51%;
+    width: 45px;
+    animation: orbitRocas 32s linear infinite -23.5s;
+}
+
+.asteroide49 {
+    position: absolute;
+    top: 89%;
+    left: 51%;
+    width: 45px;
+    animation: orbitRocas2 32s linear infinite -24s;
+}
+
+.asteroide50 {
+    position: absolute;
+    top: 89%;
+    left: 51%;
+    width: 45px;
+    animation: orbitRocas3 32s linear infinite -24.5s;
+}
+
+.asteroide51 {
+    position: absolute;
+    top: 89%;
+    left: 51%;
+    width: 45px;
+    animation: orbitRocas 32s linear infinite -25s;
+}
+
+.asteroide52 {
+    position: absolute;
+    top: 89%;
+    left: 51%;
+    width: 40px;
+    animation: orbitRocas2 32s linear infinite -25.5s;
+}
+
+.asteroide53 {
+    position: absolute;
+    top: 89%;
+    left: 51%;
+    width: 45px;
+    animation: orbitRocas3 32s linear infinite -26s;
+}
+
+.asteroide54 {
+    position: absolute;
+    top: 89%;
+    left: 51%;
+    width: 50px;
+    animation: orbitRocas 32s linear infinite -26.5s;
+}
+
+.asteroide55 {
+    position: absolute;
+    top: 89%;
+    left: 51%;
+    width: 40px;
+    animation: orbitRocas2 32s linear infinite -27s;
+}
+
+.asteroide56 {
+    position: absolute;
+    top: 89%;
+    left: 51%;
+    width: 45px;
+    animation: orbitRocas3 32s linear infinite -27.5s;
+}
+
+.asteroide57 {
+    position: absolute;
+    top: 89%;
+    left: 51%;
+    width: 45px;
+    animation: orbitRocas 32s linear infinite -28s;
+}
+
+.asteroide58 {
+    position: absolute;
+    top: 89%;
+    left: 51%;
+    width: 45px;
+    animation: orbitRocas2 32s linear infinite -28.5s;
+}
+
+.asteroide59 {
+    position: absolute;
+    top: 89%;
+    left: 51%;
+    width: 45px;
+    animation: orbitRocas3 32s linear infinite -29s;
+}
+
+.asteroide60 {
+    position: absolute;
+    top: 89%;
+    left: 51%;
+    width: 45px;
+    animation: orbitRocas 32s linear infinite -29.5s;
+}
+
+.asteroide61 {
+    position: absolute;
+    top: 89%;
+    left: 51%;
+    width: 45px;
+    animation: orbitRocas2 32s linear infinite -30s;
+}
+
+.asteroide62 {
+    position: absolute;
+    top: 89%;
+    left: 51%;
+    width: 45px;
+    animation: orbitRocas3 32s linear infinite -30.5s;
+}
+
+.asteroide63 {
+    position: absolute;
+    top: 89%;
+    left: 51%;
+    width: 45px;
+    animation: orbitRocas2 32s linear infinite -31.5s;
+}
+
+.asteroide64 {
+    position: absolute;
+    top: 89%;
+    left: 51%;
+    width: 45px;
+    animation: orbitRocas3 32s linear infinite -32s;
+}
+
+.asteroide1:hover{
+    width: 150px;
+}
+/*keyframes*/
+
+@keyframes orbitMercurio {
+  from { transform: rotate(0deg)  translateX(100px) rotate(0deg) ; }
+  to   { transform: rotate(-360deg) translateX(100px) rotate(360deg); }
+}
+
+@keyframes orbitEarth {
+  from { transform: rotate(0deg) translateX(-230px) rotate(0deg); }
+  to   { transform: rotate(-360deg) translateX(-230px) rotate(360deg); }
+}
+
+@keyframes orbitVenus {
+  from { transform: rotate(0deg) translateX(154px) rotate(0deg); }
+  to   { transform: rotate(360deg) translateX(154px) rotate(-360deg); }
+}
+
+@keyframes orbitMarte {
+  from { transform: rotate(0deg) translateX(310px) rotate(0deg) ; }
+  to   { transform: rotate(360deg) translateX(310px) rotate(-360deg) ; }
+}
+
+/*keyframesrocas*/
+
+@keyframes orbitRocas {
+  from { transform: rotate(0deg) translateX(400px) rotate(0deg) rotateZ(0deg); }
+  to   { transform: rotate(360deg) translateX(400px) rotate(-360deg) rotateZ(-360deg); }
+}
+
+@keyframes orbitRocas2 {
+  from { transform: rotate(0deg) translateX(410px) rotate(0deg) rotateZ(0deg); }
+  to   { transform: rotate(360deg) translateX(410px) rotate(-360deg) rotateZ(360deg); }
+}
+
+@keyframes orbitRocas3 {
+  from { transform: rotate(0deg) translateX(390px) rotate(0deg) rotateZ(0deg); }
+  to   { transform: rotate(360deg) translateX(390px) rotate(-360deg) rotateZ(-360deg); }
+}
+
+
+
+@keyframes orbitJupiter {
+  from { transform: rotate(0deg) translateX(500px) rotate(0deg); }
+  to   { transform: rotate(-360deg) translateX(500px) rotate(360deg); }
+}
+
+@keyframes orbitSaturno {
+  from { transform: rotate(0deg) translateX(600px) rotate(0deg); }
+  to   { transform: rotate(360deg) translateX(600px) rotate(-360deg); }
+}
+
+@keyframes orbitUrano {
+  from { transform: rotate(0deg) translateX(690px) rotate(0deg); }
+  to   { transform: rotate(360deg) translateX(690px) rotate(-360deg); }
+}
+
+@keyframes orbitNeptuno {
+  from { transform: rotate(0deg) translateX(765px) rotate(0deg); }
+  to   { transform: rotate(-360deg) translateX(765px) rotate(360deg); }
+}
+
+/**/
+
+.type1{
+    color: transparent;
+    position: relative;
+    bottom: -1400px;
+    
+}
+
+/*CSS TEXTOS PLANETAS*/
+
+.sun2{
+
+background-color: #ff5537;
+border-radius: 12px;
+color: yellow;
+text-align: center;
+text-shadow: 2px 2px black;
+transition: 0.5s;
+}
+
+.sun2:hover{
+    background-color: #ec6d5a;
+}
+
+.textplanets{
+    
+    color: black;
+    font-size: 30px;
+    text-justify:auto;
+}
+
+.tdplanets{
+    border-radius: 24px;
+    background-color: #FFDBBB;
+    border-top: 6px;
+    transition: 0.5s;
+}
+
+.tdplanets:hover{
+    background-color: #eec6c0;
+}
+
+.capital{
+    float: left;
+    line-height: 60px;
+    font-size: 85px;
+}
+
+
+.mercurio2{
+
+background-color: #d46352;
+border-radius: 12px;
+color: brown;
+text-align: center;
+text-shadow: 2px 2px black;
+transition: 0.5s;
+}
+
+.mercurio2:hover{
+    background-color: rgb(231, 130, 115);
+}
+
+
+.venus2{
+
+background-color: #7c4e1a;
+border-radius: 12px;
+color: rgb(199, 199, 68);
+text-align: center;
+text-shadow: 2px 2px black;
+transition: 0.5s;
+}
+
+.venus2:hover{
+    background-color: #81613d;
+}
+
+.marte2{
+
+background-color: #ac4735;
+border-radius: 12px;
+color: rgba(182, 46, 46, 0.548);
+text-align: center;
+text-shadow: 2px 2px black;
+transition: 0.5s;
+}
+
+.marte2:hover{
+    background-color: #a75f52;
+}
+
+.tierra2{
+
+background-color: #243b86;
+border-radius: 12px;
+color: rgba(27, 48, 143, 0.548);
+text-align: center;
+text-shadow: 2px 2px black;
+transition: 0.5s;
+}
+
+.tierra2:hover{
+    background-color: #4a82cc;
+}
+
+.jupiter2{
+
+background-color: #9b8c77;
+border-radius: 12px;
+color:   #53432e;
+text-align: center;
+text-shadow: 2px 2px black;
+transition: 0.5s;
+}
+
+.jupiter2:hover{
+    background-color: #9c978f;
+}
+
+.cintu2 {
+    background-color: #9b8c77;
+border-radius: 12px;
+color:   #53432e;
+text-align: center;
+text-shadow: 2px 2px black;
+transition: 0.5s;
+}
+
+.cintu2:hover{
+    background-color: #9c978f;
+}
+
+.saturno2{
+
+background-color: #d8b69d;
+border-radius: 12px;
+color:   #fde1bf;
+text-align: center;
+text-shadow: 2px 2px black;
+transition: 0.5s;
+}
+
+.saturno2:hover{
+    background-color: #d6bdab;
+}
+
+.urano2{
+
+background-color: #005871;
+border-radius: 12px;
+color:   #abc9fb;
+text-align: center;
+text-shadow: 2px 2px black;
+transition: 0.5s;
+}
+
+.urano2:hover{
+    background-color: #548594;
+}
+
+.neptuno2{
+
+background-color: #3850cf;
+border-radius: 12px;
+color:   #93d7fe;
+text-align: center;
+text-shadow: 2px 2px black;
+transition: 0.5s;
+}
+
+.neptuno2:hover{
+    background-color:#6679db;
+}
