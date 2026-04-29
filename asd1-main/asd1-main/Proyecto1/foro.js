@@ -1,5 +1,3 @@
-
-
 const FORO_KEY = 'foro_sistemasolar';
 
 // 1 GUARDAR Y CARGAR //
@@ -37,11 +35,10 @@ function foroPublicarPost() {
     const posts = foroCargarPosts();
     posts.unshift({
         id: Date.now(),
-        autor, titulo, contenido,
-        fecha: new Date().toISOString(),
-        likes: 0,
-        likedByMe: false,
-        respuestas: []
+        autor, 
+        titulo, 
+        contenido,
+        fecha: new Date().toISOString()
     });
 
     foroGuardarPosts(posts);
@@ -54,18 +51,6 @@ function foroPublicarPost() {
     foroMostrarToast('🚀 ¡Publicado con éxito!');
 }
 
-// 3 LIKE //
-
-function foroToggleLike(id) {
-    const posts = foroCargarPosts();
-    const post  = posts.find(p => p.id === id);
-    if (!post) return;
-    post.likedByMe = !post.likedByMe;
-    post.likes    += post.likedByMe ? 1 : -1;
-    foroGuardarPosts(posts);
-    foroRenderPosts();
-}
-
 //  4 ELIMINAR POST  //
 
 function foroEliminarPost(id) {
@@ -73,36 +58,6 @@ function foroEliminarPost(id) {
     foroGuardarPosts(foroCargarPosts().filter(p => p.id !== id));
     foroRenderPosts();
     foroMostrarToast('🗑️ Mensaje eliminado');
-}
-
-// 5 ABRIR / CERRAR RESPUESTAS //
-
-function foroToggleRespuestas(id) {
-    document.getElementById('foro-resp-' + id).classList.toggle('foro-abierto');
-}
-
-//  6 AGREGAR RESPUESTA //
-
-function foroAgregarRespuesta(id) {
-    const autor = document.getElementById('foro-rautor-' + id).value.trim();
-    const texto = document.getElementById('foro-rtexto-' + id).value.trim();
-
-    if (!autor || !texto) { foroMostrarToast('⚠️ Completa autor y respuesta'); return; }
-
-    const posts = foroCargarPosts();
-    const post  = posts.find(p => p.id === id);
-    if (!post) return;
-
-    post.respuestas.push({ autor, texto });
-    foroGuardarPosts(posts);
-    foroRenderPosts();
-
-    setTimeout(() => {
-        const el = document.getElementById('foro-resp-' + id);
-        if (el) el.classList.add('foro-abierto');
-    }, 0);
-
-    foroMostrarToast('💬 Respuesta publicada');
 }
 
 //  7 MOSTRAR POSTS EN PANTALLA //
@@ -126,57 +81,21 @@ function foroRenderPosts() {
             hour: '2-digit', minute: '2-digit'
         });
 
-        const respuestasHTML = p.respuestas.map(r => `
-            <div class="foro-respuesta-item">
-                <span class="foro-respuesta-autor">@${foroEscapeHtml(r.autor)}</span>
-                <div class="foro-respuesta-texto">${foroEscapeHtml(r.texto)}</div>
-            </div>`).join('');
-
         return `
         <div class="foro-post-card">
             <div class="foro-post-meta">
-                <span class="foro-post-autor">@${foroEscapeHtml(p.autor)}</span>
+                <span class="foro-post-autor">@${p.autor}</span>
                 <span class="foro-post-fecha">${fecha}</span>
             </div>
-            <div class="foro-post-titulo">${foroEscapeHtml(p.titulo)}</div>
-            <div class="foro-post-contenido">${foroEscapeHtml(p.contenido)}</div>
+            <div class="foro-post-titulo">${p.titulo}</div>
+            <div class="foro-post-contenido">${p.contenido}</div>
             <div class="foro-post-footer">
-                <button class="foro-btn-like ${p.likedByMe ? 'foro-liked' : ''}"
-                        onclick="foroToggleLike(${p.id})">
-                    ♥ ${p.likes}
-                </button>
-                <button class="foro-btn-responder" onclick="foroToggleRespuestas(${p.id})">
-                    💬 ${p.respuestas.length} respuesta${p.respuestas.length !== 1 ? 's' : ''}
-                </button>
                 <button class="foro-btn-eliminar" onclick="foroEliminarPost(${p.id})">🗑️ Eliminar</button>
-            </div>
-            <div class="foro-respuestas-container" id="foro-resp-${p.id}">
-                ${respuestasHTML}
-                <div class="foro-form-respuesta">
-                    <input id="foro-rautor-${p.id}" type="text"
-                           placeholder="Tu nombre" maxlength="25">
-                    <input id="foro-rtexto-${p.id}" type="text"
-                           placeholder="Escribe una respuesta..." maxlength="200">
-                    <button onclick="foroAgregarRespuesta(${p.id})">Enviar</button>
-                </div>
             </div>
         </div>`;
     }).join('');
 }
 
-
-
-
-//  9 SEGURIDAD: ESCAPAR HTML //
-
-function foroEscapeHtml(str) {
-    return str
-        .replace(/&/g, '&amp;')
-        .replace(/</g, '&lt;')
-        .replace(/>/g, '&gt;')
-        .replace(/"/g, '&quot;');
-}
-
-// INICIO //
+// ── INICIO //
 
 foroRenderPosts();
