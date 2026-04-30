@@ -1,6 +1,14 @@
+
 const FORO_KEY = 'foro_sistemasolar';
 
+// INICIO //
+
+foroRenderPosts();
+
+
 // 1 GUARDAR Y CARGAR //
+
+
 
 function foroCargarPosts() {
     const data = localStorage.getItem(FORO_KEY);
@@ -11,7 +19,7 @@ function foroGuardarPosts(posts) {
     localStorage.setItem(FORO_KEY, JSON.stringify(posts));
 }
 
-// TOAST (NOTIFICACION) //
+// 2 TOAST (NOTIFICACION) //
 
 function foroMostrarToast(msg) {
     const t = document.getElementById('foro-toast');
@@ -21,7 +29,7 @@ function foroMostrarToast(msg) {
 } 
 
 
-// 2 PUBLICAR NUEVO POST //
+// 3  PUBLICAR NUEVO POST //
 
 function foroPublicarPost() {
     const autor     = document.getElementById('foro-input-autor').value.trim();
@@ -60,7 +68,7 @@ function foroEliminarPost(id) {
     foroMostrarToast('🗑️ Mensaje eliminado');
 }
 
-//  7 MOSTRAR POSTS EN PANTALLA //
+//  5 MOSTRAR POSTS EN PANTALLA //
 
 function foroRenderPosts() {
     const posts = foroCargarPosts();
@@ -93,9 +101,6 @@ function foroRenderPosts() {
                 <button class="foro-btn-eliminar" onclick="foroEliminarPost(${p.id})">🗑️ Eliminar</button>
             </div>
         </div>`;
-    }).join('');
+    });
 }
 
-// ── INICIO //
-
-foroRenderPosts();
